@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e24;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.heading{
+    color: rgb(227, 174, 73);
+    font-size: 4rem;
+  
+}
