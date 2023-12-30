@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import './newtodo.css'
 
 const NewToDo = (props) => {
@@ -21,11 +22,14 @@ const NewToDo = (props) => {
     e.preventDefault();
     props.addTodo(todo);
     setTodo({title:'', desc:''});
+    toast("A new todo has been created")
+    
   }
 
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form' onSubmit={handleSubmit} >
+      
         <div className='form-field'>
             <label htmlFor='title'>Title: </label>
             <input type='text' name='title' id='title' value={title} onChange={handleChange} required/>
@@ -35,7 +39,8 @@ const NewToDo = (props) => {
             <textarea type='text' name='desc' id='desc' value={desc} onChange={handleChange}/>
         </div>
         <button type='submit'>Add to list</button>
-    </form>
+        
+    </form> 
   )
 }
 
